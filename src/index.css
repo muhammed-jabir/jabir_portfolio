@@ -659,7 +659,7 @@ button:hover{
   right:8%;
   bottom:0;
 
-  width:35%;
+  width:30%;
   max-width:480px;
 
   z-index:1;
@@ -763,18 +763,23 @@ button:hover{
   transform:translateX(-4px);
 }
 
-.hero-inner{
-  position:relative;
-  z-index:3;
-  width:100%;
-  max-width:1240px;
-  margin:0 auto;
-  padding:0 14%;
-  display:grid;
-  grid-template-columns:1fr;
-  align-items:center;
-}
+.hero-inner {
+  position: relative;
 
+  z-index: 3;
+
+  width: 100%;
+  max-width: 1240px;
+
+  margin: 0 auto;
+
+  padding: 0 14%;
+
+  display: grid;
+  grid-template-columns: 1fr;
+
+  align-items: center;
+}
 .hero-content{
   max-width:600px;
 }
@@ -1874,60 +1879,90 @@ button:hover{
 
 @media(max-width:768px){
 
-  .hero{
-    overflow-x:hidden;
-  }
-  .hero-background-portrait{
-    width:95%;
-    right:-2%;
-    left:auto;
-  }
-  .hero-background-portrait-img{
-    opacity:0.13;
-  }
-  .hero-bg-overlay{
-    background:linear-gradient(
-      180deg,
-      var(--bg) 0%,
-      rgba(10,10,10,0.7) 45%,
-      rgba(10,10,10,0.35) 70%,
-      transparent 95%
-    );
-  }
-  .hero-inner{
-    padding:0 6%;
-  }
-  .hero-side-nav,
-  .hero-connect-nav{
-    display:none; /* optional: keep if you already hide these on mobile elsewhere */
-  }
+  .hero {
+        position: relative;
+        min-height: auto;
+        padding: 90px 0 0;
+        overflow: hidden;
+    }
 
-/* ---- Very small screens <= 480px ---- */
+    .hero-inner {
+        width: 100%;
+        padding: 0 6%;
 
-  section{
-    padding:80px 6%;
-  }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-  .contact-container{
-    grid-template-columns:1fr;
-  }
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+        position: relative;
+        z-index: 3;
+    }
 
-  .hero{
-    min-height:auto;
-    padding:90px 0 60px;
-  }
+    /* Portrait comes AFTER the buttons */
+    .hero-background-portrait {
+        position: relative;
 
-  .hero-inner{
-    padding:0 6%;
-  }
+        left: auto;
+        right: auto;
+        bottom: auto;
 
-  .hero-bg-text{
-    display:none;
-  }
+        transform: none;
 
-  .hero-visual{
-    width:170px;
-  }
+        width: 48%;
+        max-width: 210px;
+
+        margin: 20px auto 0;
+
+        z-index: 1;
+
+        pointer-events: none;
+    }
+
+    .hero-background-portrait-img {
+        display: block;
+
+        width: 100%;
+        height: auto;
+
+        opacity: 0.14;
+
+        filter:
+            grayscale(100%)
+            contrast(0.9)
+            brightness(0.75);
+
+        -webkit-mask-image:
+            linear-gradient(
+                to bottom,
+                transparent 0%,
+                black 12%,
+                black 70%,
+                transparent 100%
+            );
+
+        mask-image:
+            linear-gradient(
+                to bottom,
+                transparent 0%,
+                black 12%,
+                black 70%,
+                transparent 100%
+            );
+    }
+
+    /* Don't cover the portrait with another overlay */
+    .hero-bg-overlay {
+        display: none;
+    }
+
+    .hero-side-nav,
+    .hero-connect-nav {
+        display: none;
+    }
 
   .info-cards{
     flex-direction:column;
@@ -2256,13 +2291,20 @@ button:hover{
 }
 
 @media (max-width:480px){
-  .hero-background-portrait{
-    width:105%;
-    right:-5%;
-  }
-  .hero-background-portrait-img{
-    opacity:0.09;
-  }
+    .hero {
+        padding-top: 80px;
+    }
+
+    .hero-background-portrait {
+        width: 65%;
+        max-width: 290px;
+
+        margin-top: 18px;
+    }
+
+    .hero-background-portrait-img {
+        opacity: 0.3;
+    }
 }
 
 @media(prefers-reduced-motion:reduce){
