@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FaDownload, FaArrowRight } from "react-icons/fa";
-import profileImg from "../assets/catnew.jpeg";
+import profileImg from "../assets/photo_portfolio.png";
 
 const container = {
   hidden: {},
@@ -32,6 +32,22 @@ function Hero() {
       <div className="hero-bg-text" aria-hidden="true">
         {"ODOO\nDEVELOPER"}
       </div>
+
+      {/* Large faded background portrait */}
+      <motion.div
+        className="hero-background-portrait"
+        initial={{ opacity: 0, scale: 1.05 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.9, delay: 0.25, ease: "easeOut" }}
+        aria-hidden="true"
+      >
+        <img
+          src={profileImg}
+          alt=""
+          className="hero-background-portrait-img"
+        />
+      </motion.div>
+      <div className="hero-bg-overlay" aria-hidden="true" />
 
       <motion.nav
         className="hero-side-nav"
@@ -68,46 +84,32 @@ function Hero() {
           <motion.span className="hero-tag" variants={item}>
             Available for freelance works
           </motion.span>
-<motion.h1 variants={item}>
-  Hi, I'm <span>Muhammed Jabir</span>
-</motion.h1>
 
-<motion.h2 variants={item}>
-  Python Developer | Odoo ERP Developer | Full Stack Web Developer
-</motion.h2>
+          <motion.h1 variants={item}>
+            Hi, I'm <span>Muhammed Jabir</span>
+          </motion.h1>
 
-<motion.p variants={item}>
-  I build scalable ERP systems and modern web applications using Python,
-  Odoo ERP, Django, React.js, PostgreSQL, JavaScript, REST APIs, XML/QWeb,
-  HTML, and CSS. I specialize in Odoo customization, business process
-  automation, API integration, and responsive full-stack development to
-  deliver secure, high-performance software solutions.
-</motion.p>
+          <motion.h2 variants={item}>
+            Python Developer | Odoo ERP Developer | Full Stack Web Developer
+          </motion.h2>
+
+          <motion.p variants={item}>
+            I build scalable ERP systems and modern web applications using Python,
+            Odoo ERP, Django, React.js, PostgreSQL, JavaScript, REST APIs, XML/QWeb,
+            HTML, and CSS. I specialize in Odoo customization, business process
+            automation, API integration, and responsive full-stack development to
+            deliver secure, high-performance software solutions.
+          </motion.p>
 
           <motion.div className="hero-actions" variants={item}>
             <a href="#contact" className="btn-outline">
-              Let's Connect <FaArrowRight style={ { marginLeft : 6 }} />
-             
+              Let's Connect <FaArrowRight style={{ marginLeft: 6 }} />
             </a>
 
             <a href="#projects" className="btn-outline">
               View Work <FaArrowRight style={{ marginLeft: 6 }} />
             </a>
           </motion.div>
-        </motion.div>
-
-        <motion.div
-          className="hero-visual"
-          initial={{ opacity: 0, scale: 0.85 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, delay: 0.35 }}
-          aria-hidden="true"
-        >
-          <div className="hero-visual-grid" />
-          <div className="hero-visual-ring" />
-          <div className="hero-visual-core">
-            <img src={profileImg} alt="Muhammed Jabir M T" className="hero-visual-img" />
-          </div>
         </motion.div>
       </div>
     </section>
