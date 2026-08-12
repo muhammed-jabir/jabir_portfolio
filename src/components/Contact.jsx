@@ -1,5 +1,6 @@
 
 import { motion, AnimatePresence } from "framer-motion";
+import ScrollReveal from "./ScrollReveal";
 import {
     FaGithub,
     FaLinkedin,
@@ -40,12 +41,7 @@ function Contact() {
     return (
         <section id="contact">
 
-            <motion.div
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-            >  
+          <ScrollReveal> 
             <span className="eyebrow">Contact</span>
 
                 <h2 className="title">
@@ -155,7 +151,7 @@ function Contact() {
 
                 </div>
 
-            </motion.div>
+            </ScrollReveal>
 
 
             {/* =========================================================

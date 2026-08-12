@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import ScrollReveal from "./ScrollReveal";
 
 import {
   FaPython,
@@ -116,51 +117,78 @@ function Skills() {
     };
   }, []);
 
-  return (
+ return (
     <section id="skills" className="skills">
-      <div className="skills-header">
-        <span className="eyebrow">
-          Tech Stack
-        </span>
 
-        <h2>Skills</h2>
+        <ScrollReveal>
 
-       <p>
-  Technologies, frameworks, and tools I use to develop scalable web applications, ERP solutions, and responsive user interfaces using Python, Odoo, React, Django, JavaScript, PostgreSQL, REST APIs, and modern web technologies.
-</p>
-      </div>
+            <div className="skills-header">
 
-      <div
-        className="skills-stage"
-        ref={stageRef}
-      >
-        <div className="skills-grid">
+                <span className="eyebrow">
+                    Tech Stack
+                </span>
 
-          {skills.map((skill, index) => (
-            <div
-              key={skill.name}
-              ref={(el) => {
-                cardsRef.current[index] = el;
-              }}
-              className="skill-card"
-              style={{
-                "--x": `${skillPositions[index].x}%`,
-                "--y": `${skillPositions[index].y}%`,
-                "--r": `${skillPositions[index].rotate}deg`,
-              }}
-            >
-              <div className="skill-icon">
-                {skill.icon}
-              </div>
+                <h2>
+                    Skills
+                </h2>
 
-              <h3>{skill.name}</h3>
+                <p>
+                    Technologies, frameworks, and tools I use to develop
+                    scalable web applications, ERP solutions, and responsive
+                    user interfaces using Python, Odoo, React, Django,
+                    JavaScript, PostgreSQL, REST APIs, and modern web
+                    technologies.
+                </p>
+
             </div>
-          ))}
 
-        </div>
-      </div>
+        </ScrollReveal>
+
+
+        <ScrollReveal delay={0.08}>
+
+            <div
+                className="skills-stage"
+                ref={stageRef}
+            >
+
+                <div className="skills-grid">
+
+                    {skills.map((skill, index) => (
+
+                        <div
+                            key={skill.name}
+                            ref={(el) => {
+                                cardsRef.current[index] = el;
+                            }}
+                            className="skill-card"
+                            style={{
+                                "--x": `${skillPositions[index].x}%`,
+                                "--y": `${skillPositions[index].y}%`,
+                                "--r": `${skillPositions[index].rotate}deg`,
+                            }}
+                        >
+
+                            <div className="skill-icon">
+                                {skill.icon}
+                            </div>
+
+                            <h3>
+                                {skill.name}
+                            </h3>
+
+                        </div>
+
+                    ))}
+
+                </div>
+
+            </div>
+
+        </ScrollReveal>
+
     </section>
-  );
+);
 }
 
 const skillPositions = [

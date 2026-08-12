@@ -1,87 +1,49 @@
-import { motion } from "framer-motion";
-import { FaGraduationCap, FaDownload } from "react-icons/fa";
+import ScrollReveal from "./ScrollReveal";
+import { FaGraduationCap } from "react-icons/fa";
 
+function Education() {
 
-function Education(){
+    return (
+        <section id="education">
 
+            <ScrollReveal>
 
-return(
+                <h2 className="title">
+                    Education
+                </h2>
 
-<section id="education">
+                <div className="education-card">
 
+                    <div className="education-icon">
+                        <FaGraduationCap />
+                    </div>
 
-<motion.div
+                    <div>
 
-initial={{
-opacity:0,
-y:50
-}}
+                        <h3>
+                            Bachelor of Computer Applications (BCA)
+                        </h3>
 
-whileInView={{
-opacity:1,
-y:0
-}}
+                        <p>
+                            University of Calicut
+                        </p>
 
-transition={{
-duration:.5
-}}
+                        <p>
+                            Graduated: 2025
+                        </p>
 
->
+                        <p>
+                            Computer Science | Software Development
+                        </p>
 
+                    </div>
 
-<h2 className="title">
-Education
-</h2>
+                </div>
 
+            </ScrollReveal>
 
-
-<div className="education-card">
-
-
-<div className="education-icon">
-
-<FaGraduationCap/>
-
-</div>
-
-
-<div>
-
-
-<h3>
-Bachelor of Computer Applications (BCA)
-</h3>
-
-
-<p>
-University of Calicut
-</p>
-
-
-<p>
-Graduated: 2025
-</p>
-
-
-<p>
-Computer Science | Software Development
-</p>
-
-
-</div>
-
-
-</div>
-
-</motion.div>
-
-
-</section>
-
-
-)
-
+        </section>
+    );
 }
-
 
 export default Education;
