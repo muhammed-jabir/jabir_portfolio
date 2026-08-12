@@ -99,35 +99,38 @@ const projects = [
     github: "#",
   },
 
-  {
-    tag: "FRONTEND / REST API",
-    title: "Weather Dashboard",
+{
+  tag: "AI / COMPUTER VISION",
+  title: "AI Virtual Mouse",
 
-    shortDescription:
-      "Responsive weather application with real-time forecasts, REST API integration, and location-based search.",
+  shortDescription:
+    "AI-powered virtual mouse that uses real-time hand tracking and gesture recognition to control the computer without physical input devices.",
 
-    tags: ["React", "REST API", "JavaScript"],
+  tags: ["Python", "OpenCV", "MediaPipe", "Computer Vision"],
 
-    fullDescription:
-      "Developed a responsive weather dashboard using React.js and REST APIs to display real-time weather information, multi-day forecasts, location search, temperature unit conversion, and dynamic weather updates with an intuitive user interface.",
+  fullDescription:
+    "Developed an AI-powered virtual mouse using Python, OpenCV, MediaPipe, and PyAutoGUI to enable touchless computer interaction through hand gestures. The system tracks hand landmarks in real time and translates finger movements and gestures into mouse actions such as cursor movement and left-clicking.",
 
-    techStack: [
-      "React.js",
-      "JavaScript",
-      "REST API",
-      "HTML5",
-      "CSS3",
-    ],
+  techStack: [
+    "Python",
+    "OpenCV",
+    "MediaPipe",
+    "PyAutoGUI",
+    "NumPy",
+    "Computer Vision",
+  ],
 
-    highlights: [
-      "Integrated public REST APIs for live weather information",
-      "Implemented location search and dynamic weather updates",
-      "Built responsive UI compatible with desktop and mobile devices",
-      "Handled API errors, loading states, and user-friendly interactions",
-    ],
+  highlights: [
+    "Implemented real-time hand and finger tracking using MediaPipe",
+    "Mapped index-finger movement to control the system cursor",
+    "Implemented thumb-and-index finger pinch gesture for left-clicking",
+    "Processed webcam input using OpenCV for real-time interaction",
+    "Built a modular architecture for gesture recognition and mouse control",
+  ],
 
-    github: "#",
-  },
+  github: "https://github.com/muhammed-jabir/ai_virtual_mouse",
+}
+
 ];
 
 function Projects() {
