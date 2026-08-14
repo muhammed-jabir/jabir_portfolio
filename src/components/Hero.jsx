@@ -137,21 +137,21 @@ function Hero() {
           </motion.span>
 
           <motion.h1 variants={item}>
-            Hi, I'm <span>Muhammed Jabir</span>
+            Hi, I'm <span>Muhammed Jabir M T</span>
           </motion.h1>
 
           <motion.h2 variants={item}>
-            Python Developer | Odoo ERP Developer | Full Stack Web Developer
+            Odoo Developer | Python Developer | Full Stack Developer
           </motion.h2>
 
-          <motion.p variants={item}>
-            I build scalable ERP systems and modern web applications using
-            Python, Odoo ERP, Django, React.js, PostgreSQL, JavaScript,
-            REST APIs, XML/QWeb, HTML, and CSS. I specialize in Odoo
-            customization, business process automation, API integration,
-            and responsive full-stack development to deliver secure,
-            high-performance software solutions.
-          </motion.p>
+        <motion.p variants={item}>
+  I'm Muhammed Jabir M T, an Odoo Developer and Python Full Stack
+  Developer specializing in Odoo ERP customization, business process
+  automation, API integration, and modern web application development.
+  I work with Python, Odoo, Django, React.js, PostgreSQL, JavaScript,
+  REST APIs, XML/QWeb, HTML, and CSS to build scalable and
+  high-performance business solutions.
+</motion.p>
 
           {/* Buttons */}
           <motion.div
@@ -201,11 +201,11 @@ function Hero() {
             delay: 0.25,
             ease: "easeOut",
           }}
-          aria-hidden="true"
+
         >
           <img
             src={profileImg}
-            alt=""
+            alt="Muhammed Jabir M T - Odoo Developer and Python Full Stack Developer"
             className="hero-background-portrait-img"
           />
         </motion.div>
